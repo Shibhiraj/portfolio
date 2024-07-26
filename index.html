@@ -3,106 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SHIBHIRAJ V</title>
-    <link rel="stylesheet" href="External.css">
+    <title>Flexbox Horizontal Navigation</title>
     <style>
-        table,th,td,tr{
-            border: inset;
-    margin-left: 29%;
-    height: 50px;
-    width: 550px;
-    text-align: center;
-    color: aqua;
-}
-
-
-#hiphop{
-
-}
-body{
-    background-color: rgb(58, 55, 55);
-    /* border: 20px inset; */
-    /* width: fit-content;
-    height: fit-content; */
-}
-.king{
-    margin-left: 10%;
-    margin-top: 2%;
-    margin-right: -10%;
-    color: white;
-    word-spacing: 40px;
-    font-family: Arial;
-    border-radius: 20px;
-}
-a:link,a:visited{
-    text-decoration: none;
-    color: white;
-    
-}
-a:hover{
-    /* background-color    : greenyellow; */
-    color:greenyellow;
-    border-radius: 40px;
-    /* padding: 10px; */
-}
-button:hover{
-    background-color: greenyellow;
-}
-.ling{
-     padding: 1px  30px;
-     border-radius: 40px;
-}
-.nen{
-    text-align: justify; 
-    margin-left: 30%;
-    margin-right: 20%; 
-    color: white;
-    font-size: 22px;
-}
-.container {
-    display: flex;
-    align-items: center; 
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 5px;
-   }
-   
-   img {
-    height: 200px;
-    width: 200px;
-    margin-left: 270%;
-    border-radius: 50%;
-   }
+        body {
+            margin: 0;
+            background-color: #e2e610;
+            /* font-family: Arial, sans-serif; */
+        }
+        .flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #12c5c5;
+            padding: 1em;
+        }
+        .links {
+            display: flex;
+            gap: 1em;
+        }
+        .buttons {
+            display: flex;
+            gap: 1em;
+        }
+        .links a {
+            color: white;
+            text-decoration: none;/*to vanish the link underline*/
+            padding: 0.5em 1em;
+            background-color: #d51818;
+            border-radius: 15px;
+        }
+        .links a:hover {
+            background-color: #195e2d;
+        }
+        .buttons a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5em 1em;
+            background-color: #d51818;
+            border-radius: 15px;
+        }
+        .buttons a:hover {
+            background-color: #195e2d;
+        }
+        p{
+            
+            text-align: center;
+            font-size: 25px;
+            color: rgb(14, 14, 11);
+        }
+        .img{
+            border-radius:100%;
+            margin-left: 41%;
+        }
     </style>
 </head>
 <body>
-    <h1 style="text-align: center;color: aqua;">SHIBHIRAJ V</h1>
-        <div class="container" id="section2">
-                <div>
-                    <a href="resume 25.7.24.pdf"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_VQvuRo4SyQr1uhvdXwmgJYYX5pj7Yr_qcw&s" alt="Resume Image" ></a>
-                </div>
-        </div> 
-            <div id="section3">
-                <p style="font-size: 25px; color: aqua;text-align: center;">EDUCATION</p>
-                <table>
-                    <tr>
-                        <th>S.NO</th>
-                        <th>EDUCATION QUALIFICATION</th>
-                        <th>PERCENTAGE %</th>
-                        <th>PASSED OUT YEAR</th>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>SSLC</td>
-                        <td>00%</td>
-                        <td>2020</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>HSC</td>
-                        <td>00%</td>
-                        <td>2022</td>
-                    </tr>
-                </table>
-            </div>
-    </body>
+    <div class="flex">
+        <div class="links">
+            <a href="index.html">Home</a>
+            <a href="education.html">Education</a>
+            <a href="skills.html">Skills</a>
+            <a href="experience.html">Experience</a>
+            <a href="project.html">Project</a>
+        </div>
+        <div class="buttons">
+            <a href="resume 25.7.24_page-0001.jpg" class="view">View Resume</a>
+            <a href="resume 25.7.24.docx" class="download">Download Resume</a>
+        </div>
+    </div>
+    <h2 style="text-align: center;color: rgb(11, 24, 24);margin-top: 50px;font-size: 50px;">Welcome to my portfolio</h2>
+    <div class="container" id="section2">
+        <div>
+            <br>
+            <img class="img" src="C:\Users\shibh\OneDrive\Pictures\images.png" alt="Profile Image"></a>
+        </div>
+        <br><br>
+        <div>
+            <p><b>A passionate and dedicated Electronic and Communication Engineering student at SKCET College,<br> with a keen interest in cutting-edge technologies and innovations in the field. Possessing strong analytical skills, <br>a solid foundation in electronic and communication principles, and hands-on experience with various projects and practical applications.
+            <br>Committed to continuous learning and professional development to contribute effectively to the industry.</b></p>
+        </div>
+    </div>
+</body>
 </html>
