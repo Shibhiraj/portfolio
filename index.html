@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -83,5 +83,213 @@
             <br>Committed to continuous learning and professional development to contribute effectively to the industry.</b></p>
         </div>
     </div>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Photo Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="gallery">
+        <div class="thumbnail">
+            <img src="images.png" alt="Image 1">
+        </div>
+        <div class="thumbnail">
+            <img src="images.png" alt="Image 2">
+        </div>
+        <div class="thumbnail">
+            <img src="images.png" alt="Image 3">
+        </div>
+    </div>
+
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img id="lightboxImage" class="lightbox-content" src="" alt="Expanded View">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+-->
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Photo Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class>
+        <img src="whale image 1.webp" alt="whale">
+    </div>
+</body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Photo Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="gallery">
+        <div class="gallery-item" onclick="openModal('image1.jpg')">
+            <img src="whale image 1.webp" alt="Thumbnail 1">
+        </div>
+        <div class="gallery-item" onclick="openModal('image2.jpg')">
+            <img src="baby elephants image 3.jpg" alt="Thumbnail 2">
+        </div>
+        <div class="gallery-item" onclick="openModal('image2.jpg')">
+            <img src="flamingos image 2.jpg" alt="Thumbnail 2">
+        </div>
+        <div class="gallery-item" onclick="openModal('image2.jpg')">
+            <img src="drinks image 10.jpg" alt="Thumbnail 2">
+        </div>
+        <div class="gallery-item" onclick="openModal('image2.jpg')">
+            <img src="doggy and catty image 5.jpg" alt="Thumbnail 2">
+        </div>
+        <div class="gallery-item" onclick="openModal('image2.jpg')">
+            <img src="galaxy image 9.jpg" alt="Thumbnail 2">
+        </div>
+        <div class="gallery-item" onclick="openModal('image2.jpg')">
+            <img src="star fish image 7.jpg" alt="Thumbnail 2">
+        </div>
+        <div class="gallery-item" onclick="openModal('image2.jpg')">
+            <img src="penguin image 8.jpg" alt="Thumbnail 2">
+        </div>
+        <div class="gallery-item" onclick="openModal('image2.jpg')">
+            <img src="mountain goat image 6.jpg" alt="Thumbnail 2">
+        </div>
+    </div>
+
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modal-image" class="modal-content" src="">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Photo Gallery</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <style>
+        h2{
+            padding-top: 5%;
+            text-align: center;
+            color: whitesmoke;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 30px;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color:rgb(45, 41, 41);
+        }
+        .gallery{
+            width: 80%;
+            margin: 100px auto 50px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 30px;
+        }
+        .gallery img{
+            width: 100%;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        .gallery img:hover{
+            transform: scale(0.8) rotate(5deg);
+            border-radius:20px;
+        }
+        .fullimage{
+            width: 100%;
+            height: 100vh;
+            background-color:rgba(0,0,0,0.9) ;
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 100;
+        }
+        .fullimage img{
+            width: 90%;
+            max-width: 500px;
+        }
+        .fullimage span{
+            position: absolute;
+            top: 5%;
+            right: 5%;
+            font-size: 30px;
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2>My Photos</h2>
+    <div class="fullimage" id="fullimgbox">
+        <img src="baby elephants image 3.jpg" id="fullimg">
+        <span onclick="closeFullImg()">x</span>
+        <!-- <img src="flamingos image 2.jpg">
+        <img src="drinks image 10.jpg">
+        <img src="penguin image 8.jpg">
+        <img src="mountain goat image 6.jpg">
+        <img src="star fish image 7.jpg">
+        <img src="galaxy image 9.jpg">
+        <img src="giraffe image 4.jpg">
+        <img src="doggy and catty image 5.jpg"> -->
+    </div>
+    <div class="gallery">
+        <img src="baby elephants image 3.jpg" onclick="openFullImg(this.src)">
+        <img src="flamingos image 2.jpg" onclick="openFullImg(this.src)">
+        <img src="drinks image 10.jpg" onclick="openFullImg(this.src)">
+        <img src="penguin image 8.jpg" onclick="openFullImg(this.src)">
+        <img src="mountain goat image 6.jpg" onclick="openFullImg(this.src)">
+        <img src="star fish image 7.jpg" onclick="openFullImg(this.src)">
+        <img src="galaxy image 9.jpg" onclick="openFullImg(this.src)">
+        <img src="giraffe image 4.jpg" onclick="openFullImg(this.src)">
+        <img src="doggy and catty image 5.jpg" onclick="openFullImg(this.src)">
+    </div>
+
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <script>
+        
+        var fullimgbox=document.getElementById("fullimgbox");
+        var fullimg=document.getElementById("fullimg");
+
+        function openFullImg(pic)
+            {
+                fullimgbox.style.display="flex";
+                fullimg.src=pic;
+            }
+        function closeFullImg(pic)
+            {
+                fullimgbox.style.display="none";
+                fullimage.src=pic;
+            }
+            
+    </script>
 </body>
 </html>
